@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import post
 from django.contrib.auth import authenticate,logout,login
 from django.contrib.auth.models import User
@@ -9,7 +9,12 @@ from django.urls import reverse
 
 # Create your views here.
 def home(request):
-    posts=post.objects.all()
+    if request.method=="POST":
+        post_id=request.POST.get("post_id")
+        selected_post = get_object_or_404(post, pk=post_id)
+        selected_post.upvote()
+          
+    posts=post.objects.order_by('-upvotes')
     return render(request,"home.html",{'posts':posts})
 
 @login_required(login_url='/user')

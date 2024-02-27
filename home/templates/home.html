@@ -12,6 +12,7 @@
                                 <p>{{ post.content }}</p>
                                 <p>Upvotes: {{ post.upvotes }}</p>
                                 <form action="{% url 'home' %}" method="post">
+                                    {% csrf_token %}
                                     <input type="hidden" name="post_id" value="{{ post.id }}">
                                     <button type="submit" name="upvote" class="btn btn-primary">Upvote</button>
                                 </form>

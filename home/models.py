@@ -14,7 +14,3 @@ class post(models.Model):
     def upvote(self):
         self.upvotes += 1
         self.save()
-
-    def downvote(self):
-        self.upvotes -= 1
-        self.save()
