@@ -1,0 +1,119 @@
+/* custom-styles.css */
+:root {
+    --color-secondary-background-hover: #223237;
+    --color-secondary-background-selected: #33464C;
+}
+
+body {
+    background-color: #0B1416;
+}
+.navbar-brand img {
+    width: 30px;
+    height: 24px;
+}
+
+.center-btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.feed-container {
+    height: 500px; /* Set a fixed height for the container */
+    overflow-y: auto; /* Add vertical scrollbar if content overflows */
+}
+
+.feed {
+    padding: 10px; /* Add padding to the feed */
+}
+
+.post {
+    margin-bottom: 20px; /* Add margin between posts */
+}
+
+#test{
+    width: 200px;
+}
+
+/* style.css */
+.login-form {
+    margin-top: 50px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Custom CSS for the floating button */
+/* Custom CSS for the floating button */
+/* Custom CSS for the floating button */
+/* Custom CSS for the floating button */
+.floating-button {
+    position: fixed;
+    bottom: 20px; /* Adjust bottom spacing as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+.floating-button .btn {
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+}
+
+.floating-button .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Custom styles for login page */
+.login-form {
+    margin-top: 30px; /* Adjust as needed */
+}
+
+.signup-link {
+    color: #007bff; /* Blue color for the link */
+    font-weight: bold; /* Make it bold */
+}
+
+.signup-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
