@@ -8,9 +8,8 @@
                         {% for post in posts %}
                             <div class="post">
                                 <h2>{{ post.title }}</h2>
+                                <p>{{ post.user.username }} • {{post.date_posted}}</p>
                                 <p>{{ post.content }}</p>
-                                <p>Posted by: {{ post.user.username }}</p>
-                                <p> Posted on : {{post.date_posted}}</p>
                                 <p>Upvotes: {{ post.upvotes }}</p>
                                 <form action="{% url 'home' %}" method="post">
                                     <input type="hidden" name="post_id" value="{{ post.id }}">
