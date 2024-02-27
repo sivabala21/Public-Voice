@@ -17,7 +17,7 @@ def home(request):
     posts=post.objects.order_by('-upvotes')
     return render(request,"home.html",{'posts':posts})
 
-@login_required(login_url='/user')
+@login_required(login_url='/user',)
 def create(request):
     if request.method=="POST":
         title = request.POST.get('title')

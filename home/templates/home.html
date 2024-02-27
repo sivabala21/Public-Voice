@@ -1,21 +1,23 @@
 {% extends "layout.html" %}
 {% block content %}
-    <div class="container">
+    <div class="home-container">
         <div class="row">
             <div class="col-md-8">
                 <div class="feed-container">
                     <div class="feed">
                         {% for post in posts %}
-                            <div class="post">
-                                <h2>{{ post.title }}</h2>
-                                <p>{{ post.user.username }} • {{post.date_posted}}</p>
-                                <p>{{ post.content }}</p>
-                                <p>Upvotes: {{ post.upvotes }}</p>
-                                <form action="{% url 'home' %}" method="post">
-                                    {% csrf_token %}
-                                    <input type="hidden" name="post_id" value="{{ post.id }}">
-                                    <button type="submit" name="upvote" class="btn btn-primary">Upvote</button>
-                                </form>
+                            <div class="post-box">
+                                <div class="post">
+                                    <h2>{{ post.title }}</h2>
+                                    <p>{{ post.user.username }} • {{ post.date_posted }}</p>
+                                    <p>{{ post.content }}</p>
+                                    
+                                    <form action="{% url 'home' %}" method="post">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="post_id" value="{{ post.id }}">
+                                        <button type="submit" name="upvote" class="upvote-btn">&#9650;  {{ post.upvotes }}</button>
+                                    </form>
+                                </div>
                             </div>
                         {% endfor %}
                     </div>

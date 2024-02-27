@@ -4,6 +4,54 @@
     --color-secondary-background-selected: #33464C;
 }
 
+
+body {
+    background-color: #0B1416;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+.navbar-brand img {
+    width: 30px;
+    height: 24px;
+}
+
+.center-btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.home-container{
+    margin-left: 400px;
+}
+
+.feed-container {
+    max-height: calc(100vh - 150px); /* Adjust height as needed */
+    overflow-y: auto; /* Add vertical scrollbar if content overflows */
+    display: flex; /* Use flexbox to center content vertically */
+    justify-content: center; /* Center content horizontally */
+    align-items: flex-start; /* Align content to the top */
+    padding: 20px; /* Add padding to the feed */
+    margin-top: 50px; /* Add a top margin to create space between the navbar and the posts */
+
+    margin-left: 100px; /* Add right margin to create space */
+}
+
+/* Add style when scrolling */
+.feed-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.feed-container::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.feed-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color of the scrollbar track */
+}
+
 body {
     background-color: #0B1416;
 }
@@ -19,9 +67,16 @@ body {
 }
 
 .feed-container {
-    height: 500px; /* Set a fixed height for the container */
+    max-height: calc(100vh - 150px); /* Adjust height as needed */
     overflow-y: auto; /* Add vertical scrollbar if content overflows */
+    display: flex; /* Use flexbox to center content vertically */
+    justify-content: center; /* Center content horizontally */
+    align-items: flex-start; /* Align content to the top */
+    padding: 20px; /* Add padding to the feed */
+    margin-top: 50px; /* Add a top margin to create space between the navbar and the posts */
 }
+
+
 
 .feed {
     padding: 10px; /* Add padding to the feed */
@@ -116,4 +171,20 @@ label {
 
 .signup-link:hover {
     text-decoration: underline; /* Underline on hover */
+}
+.post-box {
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.upvote-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #007bff;
+    cursor: pointer;
+    outline: none;
 }
