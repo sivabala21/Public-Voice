@@ -23,19 +23,14 @@ body {
 
 
 .home-container{
-    margin-left: 400px;
+    margin-left: 0px;
 }
 
 .feed-container {
-    max-height: calc(100vh - 150px); /* Adjust height as needed */
-    overflow-y: auto; /* Add vertical scrollbar if content overflows */
-    display: flex; /* Use flexbox to center content vertically */
-    justify-content: center; /* Center content horizontally */
-    align-items: flex-start; /* Align content to the top */
-    padding: 20px; /* Add padding to the feed */
-    margin-top: 50px; /* Add a top margin to create space between the navbar and the posts */
 
-    margin-left: 100px; /* Add right margin to create space */
+    width: 150%; /* Ensure the feed container covers the full width */
+    margin: 0 auto;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
 /* Add style when scrolling */
@@ -67,23 +62,24 @@ body {
 }
 
 .feed-container {
-    max-height: calc(100vh - 150px); /* Adjust height as needed */
+    max-height: calc(100vh - 150px); 
     overflow-y: auto; /* Add vertical scrollbar if content overflows */
     display: flex; /* Use flexbox to center content vertically */
     justify-content: center; /* Center content horizontally */
     align-items: flex-start; /* Align content to the top */
-    padding: 20px; /* Add padding to the feed */
-    margin-top: 50px; /* Add a top margin to create space between the navbar and the posts */
+    padding: 10px; /* Add padding to the feed */
+    margin-top: 50px; 
 }
 
 
 
 .feed {
-    padding: 10px; /* Add padding to the feed */
-}
-
+    overflow-x: auto;
+    overflow-y: auto;
+  }
+  
 .post {
-    margin-bottom: 20px; /* Add margin between posts */
+    margin-bottom: 20px;
 }
 
 #test{
@@ -178,6 +174,7 @@ label {
     margin-bottom: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure each post takes up the full width */
 }
 
 .upvote-btn {
@@ -188,3 +185,4 @@ label {
     cursor: pointer;
     outline: none;
 }
+

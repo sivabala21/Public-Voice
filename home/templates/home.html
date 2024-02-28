@@ -1,38 +1,39 @@
 {% extends "layout.html" %}
 {% block content %}
-    <div class="home-container">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="feed-container">
-                    <div class="feed">
-                        {% if isloggedin %}
-                            <div class="alert alert-danger" role="alert">PLEASE LOGIN</div>
-                        {% endif %}
-                        {% for post in posts %}
-                            <div class="post-box">
-                                <div class="post">
-                                    <h2>{{ post.title }}</h2>
-                                    <p>{{ post.user.username }} • {{ post.date_posted }}</p>
-                                    <p>{{ post.content }}</p>
-                                    
-                                    <form action="{% url 'home' %}" method="post">
-                                        {% csrf_token %}
-                                        <input type="hidden" name="post_id" value="{{ post.id }}">
-                                        <button type="submit" name="upvote" class="upvote-btn">&#9650;  {{ post.upvotes }}</button>
-                                    </form>
-                                </div>
-                            </div>
-                        {% endfor %}
-                    </div>
-                </div>
+<div class="home-container">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="feed-container">
+        <div class="feed">
+          {% if isloggedin %}
+            <div class="alert alert-danger" role="alert">
+              PLEASE LOGIN
             </div>
-        </div>
-    </div>
+          {% endif %}
+          {% for post in posts %}
+            <div class="post-box">
+              <div class="post">
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.user.username }} • {{ post.date_posted }}</p>
+                <p>{{ post.content }}</p>
 
-    <!-- Floating button -->
-    <div class="floating-button">
-        <a href="{% url 'create' %}" class="btn btn-primary btn-lg">
-            + Create Post
-        </a>
+                <form action="{% url 'home' %}" method="post">
+                  {% csrf_token %}
+                  <input type="hidden" name="post_id" value="{{ post.id }}">
+                  <button type="submit" name="upvote" class="upvote-btn">&#9650; {{ post.upvotes }}</button>
+                </form>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
     </div>
+  </div>
+</div>
+
+<div class="floating-button">
+  <a href="{% url 'create' %}" class="btn btn-primary btn-lg">
+    + Create Post
+  </a>
+</div>
 {% endblock %}
