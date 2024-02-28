@@ -18,7 +18,7 @@ def home(request):
             selected_post.upvote()
         else:
             posts=post.objects.order_by('-upvotes')
-            return render(request,"home.html",{'posts':posts,'isloggedin':False})
+            return render(request,"home.html",{'posts':posts,'isloggedin':True})
     posts=post.objects.order_by('-upvotes')
     return render(request,"home.html",{'posts':posts})
 
