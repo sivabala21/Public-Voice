@@ -17,7 +17,7 @@ def home(request):
     posts=post.objects.order_by('-upvotes')
     return render(request,"home.html",{'posts':posts})
 
-@login_required(login_url='/user',)
+@login_required(login_url='/user')
 def create(request):
     if request.method=="POST":
         title = request.POST.get('title')
@@ -41,6 +41,15 @@ def user(request):
             return render(request,"user.html",{'message':"Invaild Creditionals"})
 
     return render(request,"user.html")
+
+def userCreate(request):
+    if request.method=="POST":
+        username=request.POST.get('username')
+        password=request.POST.get('password')
+        newuser=User.objects.create_user(username=username,password=password)
+        newuser.save
+        return HttpResponseRedirect(reverse('user'))
+    return render(request,'signup.html')
 
 
 def userLogout(request):
