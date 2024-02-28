@@ -10,10 +10,15 @@ from django.urls import reverse
 # Create your views here.
 def home(request):
     if request.method=="POST":
-        post_id=request.POST.get("post_id")
-        selected_post = get_object_or_404(post, pk=post_id)
-        selected_post.upvote()
-          
+        username=str(request.user)
+        if username != "AnonymousUser":
+            print(request.user)
+            post_id=request.POST.get("post_id")
+            selected_post = get_object_or_404(post, pk=post_id)
+            selected_post.upvote()
+        else:
+            posts=post.objects.order_by('-upvotes')
+            return render(request,"home.html",{'posts':posts,'isloggedin':False})
     posts=post.objects.order_by('-upvotes')
     return render(request,"home.html",{'posts':posts})
 
@@ -33,7 +38,7 @@ def create(request):
 def user(request):
     if request.method=="POST":
         auth=authenticate(request,username=request.POST["username"],password=request.POST["password"])
-        print(auth)
+
         if auth is not None :
             login(request,auth)
             return HttpResponseRedirect(reverse(home))

@@ -5,6 +5,9 @@
             <div class="col-md-8">
                 <div class="feed-container">
                     <div class="feed">
+                        {% if not isloggedin %}
+                            <div class="alert alert-danger" role="alert">PLEASE LOGIN</div>
+                        {% endif %}
                         {% for post in posts %}
                             <div class="post-box">
                                 <div class="post">
