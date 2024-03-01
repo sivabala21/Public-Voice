@@ -9,7 +9,8 @@ Public Voice is a web application that allows users to create and share posts, p
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
+- [Acknowledgements](#acknowledgements)
+- [Contact](#contact)
 
 ## Introduction
 
@@ -18,13 +19,9 @@ Public Voice is a platform where users can create posts, share their thoughts, a
 ## Features
 
 - User authentication (login and logout)
-- Post creation and sharing
+- Post creation 
 - Upvoting system for posts
 - Responsive design using Bootstrap
-- Commenting system for posts
-- Search functionality to find specific posts
-- User profiles with activity history
-- ...
 
 ## Installation
 
@@ -56,6 +53,10 @@ To access the Django admin page, visit [http://localhost:8000/admin](http://loca
 - Username: admin
 - Password: admin
 
+## Live Demo
+
+Check out the live demo of Public Voice at [https://publicvoice.pythonanywhere.com/](https://publicvoice.pythonanywhere.com/).
+
 ## Contributing
 
 Contributions are welcome! If you have suggestions, bug reports, or want to contribute to the development, follow these steps:
@@ -65,10 +66,6 @@ Contributions are welcome! If you have suggestions, bug reports, or want to cont
 3. Make your changes and commit: `git commit -m "Add new feature"`
 4. Push to the branch: `git push origin feature-branch`
 5. Create a pull request.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgements
 
