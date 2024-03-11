@@ -2,6 +2,10 @@
 
 Public Voice is a web application that allows users to create and share posts, providing a platform for public discussions.
 
+## Live Demo
+
+Check out the live demo of Public Voice at [https://publicvoice.pythonanywhere.com/](https://publicvoice.pythonanywhere.com/).
+
 ## Table of Contents
 
 - [Introduction](#introduction)
@@ -53,9 +57,7 @@ To access the Django admin page, visit [http://localhost:8000/admin](http://loca
 - Username: admin
 - Password: admin
 
-## Live Demo
 
-Check out the live demo of Public Voice at [https://publicvoice.pythonanywhere.com/](https://publicvoice.pythonanywhere.com/).
 
 ## Contributing
 
