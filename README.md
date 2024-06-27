@@ -34,7 +34,7 @@ Public Voice is a platform where users can create posts, share their thoughts, a
 - Python 3
 - Django
 - Bootstrap
-- ...
+
 
 ### Installation Steps
 
@@ -73,7 +73,6 @@ Contributions are welcome! If you have suggestions, bug reports, or want to cont
 
 - Thanks to [Django](https://www.djangoproject.com/) for the powerful web framework.
 - Special thanks to [Bootstrap](https://getbootstrap.com/) for the responsive design components.
-- ...
 
 ## Contact
 
