@@ -4,7 +4,7 @@ Public Voice is a web application that allows users to create and share posts, p
 
 ## Live Demo
 
-Check out the live demo of Public Voice at [https://publicvoice.pythonanywhere.com/](https://publicvoice.pythonanywhere.com/).
+Check out the live demo of Public Voice at [[https://publicvoice.pythonanywhere.com/](https://publicvoicepython.pythonanywhere.com/)].
 
 ## Table of Contents
 
